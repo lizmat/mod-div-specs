@@ -16,8 +16,6 @@ multi sub infix:<div>(uint $a,  int $b --> int)  { nqp::div_i($a, $b) }  # UNCOV
 multi sub infix:<div>(uint $a, uint $b --> uint) { nqp::div_i($a, $b) }  # UNCOVERABLE
     
 #- infix mod -------------------------------------------------------------------
-# NOTE: According to the spec, infix:<mod> is "Not coercive,
-# so fails on differing types."  Thus no casts here.
 proto sub infix:<mod>($, $, *%) is pure is export {*}
 multi sub infix:<mod>(Int:D $a, Int:D $b --> Int:D) {
     $b

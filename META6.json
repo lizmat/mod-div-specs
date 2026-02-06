@@ -3,6 +3,8 @@
   "authors": [
     "Elizabeth Mattijsen"
   ],
+  "build-depends": [
+  ],
   "depends": [
   ],
   "description": "provide infix div / mod according to spec",
@@ -12,6 +14,9 @@
     "mod-div-specs": "lib/mod-div-specs.rakumod"
   },
   "raku": "6.d",
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/mod-div-specs.git",
   "support": {
     "bugtracker": "https://github.com/lizmat/mod-div-specs/issues",
     "email": "liz@raku.rocks",
@@ -21,6 +26,8 @@
     "DIV",
     "MOD",
     "SPEC"
+  ],
+  "test-depends": [
   ],
   "version": "0.0.1"
 }
