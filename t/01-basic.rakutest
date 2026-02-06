@@ -1,0 +1,32 @@
+use Test;
+use mod-div-specs;
+
+plan 14;
+
+my  Int $a  = 42;
+my  Int $b  =  9;
+my  int $ia = 42;
+my  int $ib =  9;
+my uint $ua = 42;
+my uint $ub =  9;
+
+is-deeply (42  div   9), 4, 'does div work with integer literals';
+is-deeply ($a  div  $b), 4, 'does it work with Int  div  Int';
+is-deeply ($ia div $ib), 4, 'does it work with int  div  int';
+is-deeply ($ua div $ib), 4, 'does it work with uint div  int';
+is-deeply ($ia div $ub), 4, 'does it work with int  div uint';
+is-deeply ($ua div $ub), 4, 'does it work with uint div uint';
+
+is-deeply (42  mod   9), 6, 'does mod work with integer literals';
+is-deeply ($a  mod  $b), 6, 'does it work with Int  mod  Int';
+is-deeply ($ia mod $ib), 6, 'does it work with int  mod  int';
+is-deeply ($ua mod $ib), 6, 'does it work with uint mod  int';
+is-deeply ($ia mod $ub), 6, 'does it work with int  mod uint';
+is-deeply ($ua mod $ub), 6, 'does it work with uint mod uint';
+
+throws-like { 42.2 div 9 }, X::Multi::NoMatch,
+  'div dies with dispatch error if non-int';
+throws-like { 42.2 mod 9 }, X::Multi::NoMatch,
+  'mod dies with dispatch error if non-int';
+
+# vim: expandtab shiftwidth=4

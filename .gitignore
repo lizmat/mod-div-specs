@@ -1,0 +1,4 @@
+.precomp/
+/mod-div-specs-*
+/releases/
+*.rakucov

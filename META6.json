@@ -1,0 +1,26 @@
+{
+  "auth": "zef:lizmat",
+  "authors": [
+    "Elizabeth Mattijsen"
+  ],
+  "depends": [
+  ],
+  "description": "provide infix div / mod according to spec",
+  "license": "Artistic-2.0",
+  "name": "mod-div-specs",
+  "provides": {
+    "mod-div-specs": "lib/mod-div-specs.rakumod"
+  },
+  "raku": "6.d",
+  "support": {
+    "bugtracker": "https://github.com/lizmat/mod-div-specs/issues",
+    "email": "liz@raku.rocks",
+    "source": "https://github.com/lizmat/mod-div-specs.git"
+  },
+  "tags": [
+    "DIV",
+    "MOD",
+    "SPEC"
+  ],
+  "version": "0.0.1"
+}
